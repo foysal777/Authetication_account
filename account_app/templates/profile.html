@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+
+{% block css_add %}
+<style>
+
+    body{
+
+background-color: rgb(255, 255, 255);
+} 
+
+
+</style>
+{% endblock %}
+
+
+
+{% block main %}
+<h1 class="text-center p-5">This is Profile page</h1>
+<h1 class="text-center p-5 text-primary fw-bold">The present user name is : {{user.username}} </h1>
+
+<div class="d-grid gap-4 col-6 mx-auto ">
+    <a  href="{% url 'pass_change' %}" class="btn btn-warning p-3" type="button">Change Password( Must OLD password )</a>
+    <a href="{% url 'pass_2' %}"  class="btn btn-success p-3" type="button">Change Password ( without OLD pass ) </a>
+  </div>
+
+
+{% endblock %}
+<br/><br/>
